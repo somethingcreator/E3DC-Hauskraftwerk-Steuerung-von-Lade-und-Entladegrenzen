@@ -32,6 +32,6 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
 
 ![scrsh](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/1254350b-c2c5-4d4e-8a5d-5bb56f226602)
 
-Ich habe für mich unter Einsatz von history und flot noch ein paar Diagramme erstellt. Ich überlasse es aber euch, sich davon zu(un)inspieieren :)
+Ich habe für mich unter Einsatz von history und flot noch ein paar Diagramme erstellt. Ich überlasse es aber euch, sich davon zu(un)inspirieren :)
 
 ![diagramme](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/2b440320-9958-4195-8794-e392a10304f5)
