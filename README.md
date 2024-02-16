@@ -13,11 +13,11 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
 - Iobroker (bei mir auf rasperry PI 5)
 - Adapter (Nutzer-individuell konfiguriert)
   - Javascipt mit blockly
-  - vis.2.0
-  - vis-justgage
-  - vis-materialdesign
-  - vis-material-advanced
-  - vis-inventwo
+  - vis.2.0 (optional, falls Steuerung über view erfolgen soll)
+    - vis-justgage
+    - vis-materialdesign
+    - vis-material-advanced
+    - vis-inventwo
 - e3dc-rscp
 - web
 - **Im E3DC-Portal/App soll für jeden Wochentag je !1! Eintrag für Sperrzeit/Entsperrzeit mit Zeit von 00:00 bis 00:00 eingestellt werden**
@@ -27,9 +27,11 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
 
 1.	Importieren datapoints
 2.	Importieren blockly-scripts
-3.	Importieren views
+3.	Importieren views (optional, falls Steuerung über view erfolgen soll)
 4.	Aktivierung javascript
 
+Steuerung entweder über view oder über Datatapoints. Diese sind, denke ich, selbsterklärend.
+   
 ![scrsh](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/1254350b-c2c5-4d4e-8a5d-5bb56f226602)
 
 Ich habe für mich unter Einsatz von history und flot noch ein paar Diagramme erstellt. Ich überlasse es aber euch, sich davon zu(un)inspirieren :)
