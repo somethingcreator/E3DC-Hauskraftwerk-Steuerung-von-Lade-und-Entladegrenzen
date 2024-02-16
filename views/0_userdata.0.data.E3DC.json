@@ -1,0 +1,204 @@
+{
+  "0_userdata.0.data.E3DC": {
+    "common": {
+      "name": "E3DC"
+    },
+    "type": "folder",
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706630532968,
+    "_id": "0_userdata.0.data.E3DC"
+  },
+  "0_userdata.0.data.E3DC.chargeUpperLimit": {
+    "common": {
+      "name": "chargeUpperLimit",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "number",
+      "read": true,
+      "write": true,
+      "def": 0
+    },
+    "type": "state",
+    "native": {},
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706630623738,
+    "_id": "0_userdata.0.data.E3DC.chargeUpperLimit",
+    "val": 90,
+    "ack": false
+  },
+  "0_userdata.0.data.E3DC.dischargeLowLimit": {
+    "common": {
+      "name": "dischargeLowLimit",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "number",
+      "read": true,
+      "write": true,
+      "def": 0
+    },
+    "type": "state",
+    "native": {},
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706630605637,
+    "_id": "0_userdata.0.data.E3DC.dischargeLowLimit",
+    "val": 60,
+    "ack": false
+  },
+  "0_userdata.0.data.E3DC.isChargeMngtOn": {
+    "common": {
+      "name": "isChargeMngtOn",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "boolean",
+      "read": true,
+      "write": true,
+      "def": false
+    },
+    "type": "state",
+    "native": {},
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706716986269,
+    "_id": "0_userdata.0.data.E3DC.isChargeMngtOn",
+    "val": true,
+    "ack": false
+  },
+  "0_userdata.0.data.E3DC.isChargingIdle": {
+    "common": {
+      "name": "isChargingIdle",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "boolean",
+      "read": true,
+      "write": true,
+      "def": false,
+      "custom": {
+        "history.0": {
+          "enabled": true,
+          "aliasId": "",
+          "debounceTime": 0,
+          "blockTime": 0,
+          "changesOnly": true,
+          "changesRelogInterval": 0,
+          "changesMinDelta": 0,
+          "ignoreBelowNumber": "",
+          "disableSkippedValueLogging": false,
+          "retention": 2678400,
+          "customRetentionDuration": 365,
+          "maxLength": 100,
+          "enableDebugLogs": false,
+          "debounce": 0,
+          "chartStep": "",
+          "ignoreZero": false
+        }
+      }
+    },
+    "type": "state",
+    "native": {},
+    "_id": "0_userdata.0.data.E3DC.isChargingIdle",
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1707991684141,
+    "val": false,
+    "ack": true
+  },
+  "0_userdata.0.data.E3DC.isDischargeMngtOn": {
+    "common": {
+      "name": "isDischargeMngtOn",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "boolean",
+      "read": true,
+      "write": true,
+      "def": false
+    },
+    "type": "state",
+    "native": {},
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706716972853,
+    "_id": "0_userdata.0.data.E3DC.isDischargeMngtOn",
+    "val": true,
+    "ack": false
+  },
+  "0_userdata.0.data.E3DC.isDischargingIdle": {
+    "common": {
+      "name": "isDischargingIdle",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "boolean",
+      "read": true,
+      "write": true,
+      "def": false,
+      "custom": {
+        "history.0": {
+          "enabled": true,
+          "aliasId": "",
+          "debounceTime": 0,
+          "blockTime": 0,
+          "changesOnly": true,
+          "changesRelogInterval": 0,
+          "changesMinDelta": 0,
+          "ignoreBelowNumber": "",
+          "disableSkippedValueLogging": false,
+          "retention": 2678400,
+          "customRetentionDuration": 365,
+          "maxLength": 100,
+          "enableDebugLogs": false,
+          "debounce": 0,
+          "chartStep": "stepStart",
+          "ignoreZero": false
+        }
+      }
+    },
+    "type": "state",
+    "native": {},
+    "_id": "0_userdata.0.data.E3DC.isDischargingIdle",
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706949788154,
+    "val": true,
+    "ack": true
+  },
+  "0_userdata.0.data.E3DC.offSetForChargeState": {
+    "common": {
+      "name": "offSetForChargeState",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "number",
+      "read": true,
+      "write": true,
+      "def": 0
+    },
+    "type": "state",
+    "native": {},
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706716927454,
+    "_id": "0_userdata.0.data.E3DC.offSetForChargeState",
+    "val": 10,
+    "ack": false
+  },
+  "0_userdata.0.data.E3DC.offSetForDischargeState": {
+    "common": {
+      "name": "offSetForDischargeState",
+      "desc": "Manuell erzeugt",
+      "role": "state",
+      "type": "number",
+      "read": true,
+      "write": true,
+      "def": 0
+    },
+    "type": "state",
+    "native": {},
+    "from": "system.adapter.admin.0",
+    "user": "system.user.admin",
+    "ts": 1706716915415,
+    "_id": "0_userdata.0.data.E3DC.offSetForDischargeState",
+    "val": 20,
+    "ack": false
+  }
+}
