@@ -6,7 +6,7 @@ Aktuell fehlen mir im Bereich der Speicherladung von E3DC Hauskraftwerk (S10X) f
 
 Zudem kann mit den beiden Automaten der Speicherladezustand völlig automatisch im Bereich zwischen 20%-80% gehalten werden. Der Grenzwert für Entladesperre kann im Sommer z.B. auf 20% abgesenkt werden, ohne die Autarkie zu schmälern.
 
-Wichtiger Hinweis: ich entwickelte diese Funktion nur für meinen eigenen Bedarf. Ich leiste weder Support, noch übernehme ich Garantie oder Haftung für irgendwelche Schäden, sollte jemand meine Entwicklung bei sich einsetzen. Ich bin auch kein Experte für raspberry/js/iobroker, sondern mache das seit ca. einem Monat als Lückenfüller-Hobby.
+**Wichtiger Hinweis:** ich entwickelte diese Funktion nur für meinen eigenen Bedarf. Ich leiste weder Support, noch übernehme ich Garantie oder Haftung für irgendwelche Schäden, sollte jemand meine Entwicklung bei sich einsetzen. Ich bin auch kein Experte für raspberry/js/iobroker, sondern mache das seit ca. einem Monat als Lückenfüller-Hobby.
 Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesserungsvorschläge, Ideen gerne willkommen ohne, dass ich ihre Umsetzung versprechen kann.
 
 # Voraussetzungen für den Einsatz
