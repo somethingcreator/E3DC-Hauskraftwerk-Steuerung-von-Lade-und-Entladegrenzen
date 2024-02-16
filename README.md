@@ -4,7 +4,7 @@ Aktuell fehlen mir im Bereich der Speicherladung von E3DC Hauskraftwerk (S10X) f
 
 2. Genau so, aber mit dem umgekehrten Vorzeichen funktioniert die Entladesperre. Diese soll verhindern, dass der Ladezustand des Speichers unter den eingestellten Grenzwert (z.B. 40%) fällt. Die im E3DC vorhandene Notstromreserve-Funktion führt dazu, dass der Speicher ständig nachgeladen wird, um die Notstromreserve zu erhalten. Die Erfahrung zeigt, dass ein paar sonnige Tage im Winter ausreichen, um ohne Nachladen aus dem Netz mit dieser Funktion einen ausreichenden Ladezustand als Reserve zu erhalten. Umgekehrt wird die Entladesperre aufgehoben, wenn der Ladezustand auf Grenzwert + Offset (z.B. 20%) = 60% steigt. Die Notstromreserve im E3DC kann so auf 0% eingestellt werden. 
 
-Zudem kann mit den beiden Automaten der Speicherladezustand völlig automatisch im Bereich zwischen 20%-80% gehalten werden. Der Grenzwert für Entladesperre kann im Sommer z.B. auf 20% abgesenkt werden, ohne die Autarkie zu schmälern.
+Zudem kann mit den beiden Automaten der Speicherladezustand völlig automatisch in einem Bereich z.B. zwischen 20%-80% gehalten werden. Der Grenzwert für Entladesperre kann im Sommer z.B. auf 20% abgesenkt werden, ohne die Autarkie zu schmälern.
 
 Alle Parameter (Grenzen, Offsets) sind konfigurierbar. Beide Automaten lassen einzeln sich an- und ausschalten.
 
