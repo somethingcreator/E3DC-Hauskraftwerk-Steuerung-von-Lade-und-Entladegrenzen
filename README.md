@@ -32,7 +32,7 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
 3.	Importieren views (optional, falls Steuerung über view erfolgen soll)
 4.	Aktivierung javascript
 
-Steuerung entweder über view oder über Datatapoints. Diese sind, denke ich, selbsterklärend.
+Steuerung entweder über view oder über Datapoints. Diese sind, denke ich, selbsterklärend.
    
 ![scrsh](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/1254350b-c2c5-4d4e-8a5d-5bb56f226602)
 
