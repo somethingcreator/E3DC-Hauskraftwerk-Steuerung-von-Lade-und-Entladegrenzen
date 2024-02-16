@@ -6,7 +6,7 @@ Aktuell fehlen mir im Bereich der Speicherladung von E3DC Hauskraftwerk (S10X) f
 
 Zudem kann mit den beiden Automaten der Speicherladezustand völlig automatisch in einem Bereich z.B. zwischen 20%-80% gehalten werden. Der Grenzwert für Entladesperre kann im Sommer z.B. auf 20% abgesenkt werden, ohne die Autarkie zu schmälern.
 
-Alle Parameter (Grenzen, Offsets) sind konfigurierbar. Beide Automaten lassen einzeln sich an- und ausschalten.
+Alle Parameter (Grenzen, Offsets) sind konfigurierbar. Beide Automaten lassen sich einzeln sich an- und ausschalten.
 
 **Wichtiger Hinweis:** ich entwickelte diese Funktion nur für meinen eigenen Bedarf. Ich leiste weder Support, noch übernehme ich Garantie oder Haftung für irgendwelche Schäden, sollte jemand meine Entwicklung bei sich einsetzen. Ich bin auch kein Experte für raspberry/js/iobroker, sondern mache das seit ca. einem Monat als Lückenfüller-Hobby.
 Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesserungsvorschläge, Ideen gerne willkommen ohne, dass ich ihre Umsetzung versprechen kann.
@@ -36,6 +36,6 @@ Steuerung entweder über view oder über Datatapoints. Diese sind, denke ich, se
    
 ![scrsh](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/1254350b-c2c5-4d4e-8a5d-5bb56f226602)
 
-Ich habe für mich unter Einsatz von history und flot noch ein paar Diagramme erstellt. Ich überlasse es aber euch, sich davon zu(un)inspirieren :)
+Ich habe für mich unter Einsatz von history und flot noch ein paar Diagramme erstellt. Ich überlasse es aber euch, sich davon (un)inspirieren zu lassen :)
 
 ![diagramme](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/2b440320-9958-4195-8794-e392a10304f5)
