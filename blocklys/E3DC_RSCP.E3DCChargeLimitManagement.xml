@@ -1,0 +1,1267 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="N#zOOI}`[NQmz|ZnE16x">isActive</variable>
+    <variable id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</variable>
+    <variable id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</variable>
+    <variable id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</variable>
+  </variables>
+  <block type="on" id="Vp),pt^faWs#bN0!xGtZ" x="-962" y="-2563">
+    <field name="OID">e3dc-rscp.0.BAT.BAT_0.RSOC</field>
+    <field name="CONDITION">ne</field>
+    <field name="ACK_CONDITION"></field>
+    <statement name="STATEMENT">
+      <block type="debug" id="NVnWg!oN-PB@5:N?ntGk">
+        <field name="Severity">log</field>
+        <value name="TEXT">
+          <shadow type="text" id="pFzF2QUmn!HHGF@XL-9Z">
+            <field name="TEXT">Starte Ladelimit-Management ...</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="debug" id="q|IlxfpM$p@J+^k_*7PE">
+            <field name="Severity">log</field>
+            <value name="TEXT">
+              <shadow type="text" id="miJp5.EKNf)O%uZw~IFU">
+                <field name="TEXT">test</field>
+              </shadow>
+              <block type="text_join" id="w}8GFI[C,s3%uN:{$Y)C">
+                <mutation items="14"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="bFVQ+sgQ(7x.49WO?m#7">
+                    <field name="TEXT">SOC des Speichers ist: </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="get_value" id="m|[eSYOTh38s8A#y9qjg">
+                    <field name="ATTR">val</field>
+                    <field name="OID">e3dc-rscp.0.BAT.BAT_0.RSOC</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="text" id="QKBz{D|spL206i2ur4**">
+                    <field name="TEXT">, Ladelimitsteuerung ist : </field>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="get_value" id="zN_oV-HqI})G12l+mLb#">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.isChargeMngtOn</field>
+                  </block>
+                </value>
+                <value name="ADD4">
+                  <block type="text" id="MT@LgNzr2M1+E}ym2w7j">
+                    <field name="TEXT">, Entladelimitsteuerung ist : </field>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="get_value" id=",0uh)[Bq2}XtYZ6J(;mQ">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.isDischargeMngtOn</field>
+                  </block>
+                </value>
+                <value name="ADD6">
+                  <block type="text" id="QAHS@5Q#Ieqdbsd6.x=f">
+                    <field name="TEXT">, Ladelimit ist: </field>
+                  </block>
+                </value>
+                <value name="ADD7">
+                  <block type="get_value" id="O01/Y1^DVrO^b1v7.xKc">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.chargeUpperLimit</field>
+                  </block>
+                </value>
+                <value name="ADD8">
+                  <block type="text" id="[Jl_ffz|Sbi/Bt}YOwrB">
+                    <field name="TEXT">, OffSet von Ladelimit ist: </field>
+                  </block>
+                </value>
+                <value name="ADD9">
+                  <block type="get_value" id="i-[4owuzShbMK?Oq6=Y9">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.offSetForStateChange</field>
+                  </block>
+                </value>
+                <value name="ADD10">
+                  <block type="text" id="Oegp+yr*):]~cs{+vxnK">
+                    <field name="TEXT">, Entladelimit ist: </field>
+                  </block>
+                </value>
+                <value name="ADD11">
+                  <block type="get_value" id="0#unKZu0%jzlPhI;WM92">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.dischargeLowLimit</field>
+                  </block>
+                </value>
+                <value name="ADD12">
+                  <block type="text" id="b(~1?N^G,~X`/|oL2PjI">
+                    <field name="TEXT">, OffSet von Entladelimit ist: </field>
+                  </block>
+                </value>
+                <value name="ADD13">
+                  <block type="get_value" id="ePo{U/!c.nBja3:?.TPP">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.offSetForDischargeState</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="lXwbA+]O_GT|q(0YFhz%">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="procedures_callreturn" id="JU^nK*]~|/0H,(f3jYwk">
+                    <mutation name="getChargeNodeID"></mutation>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="N+,[zLY9Ok^u2wy?AO*g">
+                    <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                    <value name="VALUE">
+                      <block type="procedures_callreturn" id="z5PfnH=aFD5Tn|`z_q;l">
+                        <mutation name="getDischargeNodeID"></mutation>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="{Y9|:)k{2[Dsn616SyPG">
+                        <value name="IF0">
+                          <block type="get_value" id="OsOj+$;|wH^OczgZ-wlg">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.data.E3DC.isDischargeMngtOn</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="procedures_callnoreturn" id="E+oN5BMWIqgH+dHtpPL*">
+                            <mutation name="processDischargeMngt"></mutation>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="H/*lSuGANhiVgrr$Mby%">
+                            <value name="IF0">
+                              <block type="get_value" id="A)NTIi{?rTrtootP26K!">
+                                <field name="ATTR">val</field>
+                                <field name="OID">0_userdata.0.data.E3DC.isChargeMngtOn</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callnoreturn" id="_m-UePOKftoCs+5@a_sV">
+                                <mutation name="processChargeMngt"></mutation>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="timeouts_wait" id="g0ugCW,JI_yW%S,,HE$d">
+                                <field name="DELAY">1</field>
+                                <field name="UNIT">min</field>
+                                <next>
+                                  <block type="update" id="5rW]}Yw{!WU^mR{N6t3Q">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                    <field name="OID">0_userdata.0.data.E3DC.isChargingIdle</field>
+                                    <field name="WITH_DELAY">FALSE</field>
+                                    <value name="VALUE">
+                                      <block type="get_value_var" id="8F~z2s8jJd:9BciSXVB1">
+                                        <field name="ATTR">val</field>
+                                        <value name="OID">
+                                          <shadow type="field_oid" id="#GBmvd?qkG~peRt,FYMz">
+                                            <field name="oid">Object ID</field>
+                                          </shadow>
+                                          <block type="variables_get" id="D3f#3K=nFQJ-|XaJK:,Y">
+                                            <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="update" id="~,,JfZ:k!NAg2e6^D=K6">
+                                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                        <field name="OID">0_userdata.0.data.E3DC.isDischargingIdle</field>
+                                        <field name="WITH_DELAY">FALSE</field>
+                                        <value name="VALUE">
+                                          <block type="get_value_var" id="sIT)~LD@ZUsF2wI;Y?CI">
+                                            <field name="ATTR">val</field>
+                                            <value name="OID">
+                                              <shadow type="field_oid" id="#GBmvd?qkG~peRt,FYMz">
+                                                <field name="oid">Object ID</field>
+                                              </shadow>
+                                              <block type="variables_get" id="GW!l97:3AN:2~U2?GKo!">
+                                                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="Z|{EVVw%%sb2!ts]^XDW" x="-1473" y="-1601">
+    <field name="NAME">processDischargeMngt</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    <statement name="STACK">
+      <block type="debug" id="LNMNw,6m~s}m6?7)5/8-">
+        <field name="Severity">log</field>
+        <value name="TEXT">
+          <shadow type="text" id=";BLS/?!,GK~J!?GA@6^i">
+            <field name="TEXT">Starte Entlade-Management ...</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_if" id="dLY0?]F~GWUK2@u@a@UB">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="U7qJ.8RY*a9x4+4w[^AX">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="get_value" id="_WXLk#rCV?d~v%$i+K,=">
+                    <field name="ATTR">val</field>
+                    <field name="OID">e3dc-rscp.0.BAT.BAT_0.RSOC</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_arithmetic" id="=mrnTw|l7)T8/^_u/sUc">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number" id="vL(@9Dn}9]}@OT4v|[;{">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="get_value" id="uRL=ELWy66wc!+2LZmK7">
+                        <field name="ATTR">val</field>
+                        <field name="OID">0_userdata.0.data.E3DC.dischargeLowLimit</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="*tS.`byf_$-rs%m~zNfa">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="get_value" id="_Rlc*}#q2#hKP/3J[^uX">
+                        <field name="ATTR">val</field>
+                        <field name="OID">0_userdata.0.data.E3DC.offSetForDischargeState</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="debug" id="CM|sO-br|}$6hH{0qQN$">
+                <field name="Severity">log</field>
+                <value name="TEXT">
+                  <shadow type="text" id="^/OS@2x67c31?R|`ENpy">
+                    <field name="TEXT">Deaktiviere Entladesperre ...</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id="Z1R]W2W.k~v$c[si^*F/">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="(E,ut*/6N]ZE=W/k;m#Z">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="get_value_var" id="dn?=2A=PB%QR06CsP[#R">
+                            <field name="ATTR">val</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="0N]q39}c8S.Gm?/aOgG7">
+                                <field name="oid">Object ID</field>
+                              </shadow>
+                              <block type="variables_get" id="k@%oHjvtv}!;bd;0vV[I">
+                                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_boolean" id=")FYgo3}(]v*hqJ;lz^_b">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="debug" id="s1B|M[Rq,?rW;~q{RRSB">
+                        <field name="Severity">log</field>
+                        <value name="TEXT">
+                          <shadow type="text" id="FrDktk+nF58(AOKMlmI;">
+                            <field name="TEXT">Entladesperre bereits deaktiviert, mache nichts.</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="procedures_callnoreturn" id="kvS.:sq`av5=.F1a2Ds-">
+                        <mutation name="setDischargeState">
+                          <arg name="isActive"></arg>
+                        </mutation>
+                        <value name="ARG0">
+                          <block type="logic_boolean" id="U_4P*6/Un@Q*Q%%#rAn[">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="debug" id="a}H[Iuyq[y/GIF|)|qO!">
+                            <field name="Severity">log</field>
+                            <value name="TEXT">
+                              <shadow type="text" id="V5x=#}}r5#`8Mf]YwBaw">
+                                <field name="TEXT">Entladesperre ist deaktiviert.</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id=":nS;zy@`vr(zXg[y@1/K">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="get_value" id="W0XoG#3~qjs0ms[T4gc1">
+                    <field name="ATTR">val</field>
+                    <field name="OID">e3dc-rscp.0.BAT.BAT_0.RSOC</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="get_value" id="Er:M,uq0SOi$?z-wVC^D">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.dischargeLowLimit</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="debug" id="xqt*t(Gj2KI,{mUV.$lD">
+                <field name="Severity">log</field>
+                <value name="TEXT">
+                  <shadow type="text" id="xko~AZ1T=2s#I7GJCqED">
+                    <field name="TEXT">Aktiviere Entladesperre ...</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id=";U7l,[]/im~3/j,r!=q%">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="peSS{^C%mniB`:i-!Ohx">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="get_value_var" id="kNdaB,eu0M(_xZ^n=+H_">
+                            <field name="ATTR">val</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="0N]q39}c8S.Gm?/aOgG7">
+                                <field name="oid">Object ID</field>
+                              </shadow>
+                              <block type="variables_get" id="@rp%dKMF?La4uCw^+eM{">
+                                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_boolean" id=";8,za-cR3_@EI:*Npw=_">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="debug" id="]Qt*ie;(6IY[F.BB4cr.">
+                        <field name="Severity">log</field>
+                        <value name="TEXT">
+                          <shadow type="text" id="}HJ#lC9)njg1HFd50jbf">
+                            <field name="TEXT">Entladesperre bereits aktiviert, mache nichts.</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="procedures_callnoreturn" id="B[h}CUsVJCg;O|ilM`D=">
+                        <mutation name="setDischargeState">
+                          <arg name="isActive"></arg>
+                        </mutation>
+                        <value name="ARG0">
+                          <block type="logic_boolean" id="toB-51~8w!}UGoBjubCL">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="debug" id="J+U7iOaCXvvHW;p]TO%4">
+                            <field name="Severity">log</field>
+                            <value name="TEXT">
+                              <shadow type="text" id="ObQ}5l+N5Zepr|2wC2Tf">
+                                <field name="TEXT">Entladesperre ist aktiviert.</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="debug" id="?y8[_Tp{AdCodpgzx!22">
+                <field name="Severity">log</field>
+                <value name="TEXT">
+                  <shadow type="text" id="Tx@a3Df%83dUckFm0xQz">
+                    <field name="TEXT">Ladestand ist im Offset-Bereich, mache nichts.</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id=",Vy8is_?(kaBKfZ1weQA" x="-262" y="-1588">
+    <field name="NAME">processChargeMngt</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    <statement name="STACK">
+      <block type="debug" id="vkOenzVc)s9VZ.S:)P/j">
+        <field name="Severity">log</field>
+        <value name="TEXT">
+          <shadow type="text" id="HPmV:$Kk-WDwe(BOu7jG">
+            <field name="TEXT">Starte Lade-Management ...</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_if" id="F,$]]U`WxP]z_G+{a,.p">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="g#d=0,Tv~$A-o5!tltWt">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="get_value" id="@,tIlW?p.ny^i;r-*-~O">
+                    <field name="ATTR">val</field>
+                    <field name="OID">e3dc-rscp.0.BAT.BAT_0.RSOC</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_arithmetic" id="fd,V(oX{8neL8r-;0.aH">
+                    <field name="OP">MINUS</field>
+                    <value name="A">
+                      <shadow type="math_number" id="Qzl*)/j0S%yP%?O7AQvO">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="get_value" id="1=EI*tt=.u(W)}vDw6]q">
+                        <field name="ATTR">val</field>
+                        <field name="OID">0_userdata.0.data.E3DC.chargeUpperLimit</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="9Xb:Db62-[,z|$Nn0+F0">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="get_value" id="li8z!EmMmgTRD?.r1!cs">
+                        <field name="ATTR">val</field>
+                        <field name="OID">0_userdata.0.data.E3DC.offSetForChargeState</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="debug" id="Kx76D7R;jsS/Ho`{|a4{">
+                <field name="Severity">log</field>
+                <value name="TEXT">
+                  <shadow type="text" id="B1u{Qs=7+e(BuSNTtcV$">
+                    <field name="TEXT">Deaktiviere Ladeesperre ...</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id="nE!E7P5CL}Ug;PcZqLm`">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="_gD{Aa~UP3IGF;}~3DsS">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="get_value_var" id="//):RB0157:t.R6R]ra!">
+                            <field name="ATTR">val</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="0N]q39}c8S.Gm?/aOgG7">
+                                <field name="oid">Object ID</field>
+                              </shadow>
+                              <block type="variables_get" id="]GX^81=cH0YP8#1_r.s@">
+                                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_boolean" id=")n*_3u9pH_d;-G@^$yG1">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="debug" id="=qxO!2$oDg;-FU*I7/V4">
+                        <field name="Severity">log</field>
+                        <value name="TEXT">
+                          <shadow type="text" id="TPr@GH@)qrQGb=aFBA?@">
+                            <field name="TEXT">Ladesperre bereits deaktiviert, mache nichts.</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="procedures_callnoreturn" id="P@|6z5aJ43OLK$0il$,S">
+                        <mutation name="setChargeState">
+                          <arg name="isActive"></arg>
+                        </mutation>
+                        <value name="ARG0">
+                          <block type="logic_boolean" id="a]mfp$W,-H07(JcK4y/V">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="debug" id="bKy|uN8vnJTnI;Om8[9-">
+                            <field name="Severity">log</field>
+                            <value name="TEXT">
+                              <shadow type="text" id="k8MzQ11;V:kPN6!pb-6[">
+                                <field name="TEXT">Ladesperre ist deaktiviert.</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="ROp+|g0`jr4l|j-AAmZs">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="get_value" id="$ds=g))bj05(nvOZkVHJ">
+                    <field name="ATTR">val</field>
+                    <field name="OID">e3dc-rscp.0.BAT.BAT_0.RSOC</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="get_value" id="sWQKNibzU@RlA8Z+v3%H">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.data.E3DC.chargeUpperLimit</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="debug" id="BHppj;/t0/ZV.2!okrxC">
+                <field name="Severity">log</field>
+                <value name="TEXT">
+                  <shadow type="text" id="T*0(l5,*+sSu`~R}!-#2">
+                    <field name="TEXT">Aktiviere Ladesperre ...</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id="W~4nhvlBw,SFQUX.)7-N">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="@%LgwH!2T)WypBmmJRUT">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="get_value_var" id="H#u8Nd[)(Wnjj/TUv5sb">
+                            <field name="ATTR">val</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="0N]q39}c8S.Gm?/aOgG7">
+                                <field name="oid">Object ID</field>
+                              </shadow>
+                              <block type="variables_get" id="mjwC^4d`L:HyU5aHrr#:">
+                                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_boolean" id="wC3Up%Ty]si.2aNnwtN{">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="debug" id="wD*jHS7018]h0WmB*$Er">
+                        <field name="Severity">log</field>
+                        <value name="TEXT">
+                          <shadow type="text" id="mDi}#yI}k#(:dkrgC,l_">
+                            <field name="TEXT">Ladesperre bereits aktiviert, mache nichts.</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="procedures_callnoreturn" id="0bLvx=i/,mUw7NZ}lZGi">
+                        <mutation name="setChargeState">
+                          <arg name="isActive"></arg>
+                        </mutation>
+                        <value name="ARG0">
+                          <block type="logic_boolean" id="DbSg)i@9o[}!Jp%9if(s">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="debug" id=")OkUQ8I95(TqTOj#+L:t">
+                            <field name="Severity">log</field>
+                            <value name="TEXT">
+                              <shadow type="text" id="yE,~)[V`SAlKx4/^uWyy">
+                                <field name="TEXT">Ladesperre ist aktiviert.</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="debug" id="s*jx-h/w~ZW:`/pq53v%">
+                <field name="Severity">log</field>
+                <value name="TEXT">
+                  <shadow type="text" id="tfSI?-5`~fv?wppXmwq+">
+                    <field name="TEXT">Ladestand ist im Offset-Bereich, mache nichts.</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defreturn" id="K(KwIm1$6jZ}p`mSSAHC" x="-1530" y="-576">
+    <field name="NAME">getDischargeNodeID</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    <statement name="STACK">
+      <block type="variables_set" id=":y9*Y@V%9m#8P95DP_^H">
+        <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+        <value name="VALUE">
+          <block type="time_get" id="}#SeT$1spyd`7ixX$7om">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" format="false" language="false"></mutation>
+            <field name="OPTION">wd</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="~xh*@gb,LFOG^lXU*ZAt">
+            <mutation elseif="6"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="sDU0vIB9y!jD7p3vV7gw">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="$w9T-vHg/^nFca!:YQW;">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="rlAR2h#0+AYj)w7xR4}{">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="R#oOAd1ptPU7^fAj,Zo;">
+                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="`RLZ~kuIoQS`7Cjw5E-=">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.00-Monday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="=22NM/nyO3cE@{+tTmak">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="Pu![%jPI(r[+OTlR4{.K">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="eM*6@%5ZI-8U3uzN.IIu">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="variables_set" id="m0d.Ti$9Eh^(0Q)FtE+F">
+                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="Rs[!ZZ/AtDi;Vvc*l$l_">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.01-Tuesday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="logic_compare" id="cZ0V7vqk*:k,*G;i;uI-">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="4L7~$d=SL$5aQQavf[$n">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="oVg]ddX`]x#J4GY:2~:_">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="variables_set" id="AWjA]]6FIlWmpAfG%Drx">
+                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="3!edpG@4qnk3R%mYnQik">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.02-Wednesday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF3">
+              <block type="logic_compare" id="|(h[$UIj?Ph1tV5:kA]A">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="$k0{nnwEXf_.X|Yz]kzM">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="pq_*E?M^eWIOm!p/B~XA">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block type="variables_set" id="c-u8u4nV.`B{Ntmn%Gh3">
+                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="jkN6#r/:2^FR^Y_th8Z-">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.03-Thursday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF4">
+              <block type="logic_compare" id="Y5P+^!b(sXg=]NL4/d)d">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="2ar7h6yZ4[)=B{hm9prU">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="9bo9Bk+St6sT2$g?Gs);">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO4">
+              <block type="variables_set" id="Rj{gpyb?r]Vdrk8}oOdk">
+                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="u?ltBy2#y.yUyPReo`8,">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.04-Friday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF5">
+              <block type="logic_compare" id="8k!/Lm([=?aH-.Ro(#)v">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id=",WhF#]N86C9xGO=+J#T*">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="U+NAvGLL-dJ]Vk7e3%Q^">
+                    <field name="NUM">6</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO5">
+              <block type="variables_set" id="5#bD=M^~wI8ZJ)dqB$A_">
+                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="OjpVhv=;!O5k`NwO+9j2">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.05-Saturday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF6">
+              <block type="logic_compare" id="U%S_5W5CgpqP!u~}/u7D">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="l{*o^rHZ6if2HJ{9)k7`">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="[mJ]6lvf+=|W#G(:CBRr">
+                    <field name="NUM">7</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO6">
+              <block type="variables_set" id=")qkg:G6*zmZDvWOUz[}6">
+                <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="?(%{,50J,Dq;n@Gq|k4`">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.06-Sunday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="2g]]k*BMwx$E`n4[w2`q">
+        <field name="VAR" id="cMq:j!WS:zqAj(lEjx]2">dischargeNodeID</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defreturn" id="AiXj~ike=`C[kx/Ck0Pw" x="-313" y="-587">
+    <field name="NAME">getChargeNodeID</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="3H3c?.1,L,Ed?7R`|a_*">
+        <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+        <value name="VALUE">
+          <block type="time_get" id="dPcV)p,N7Wc:yu=fy@Da">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" format="false" language="false"></mutation>
+            <field name="OPTION">wd</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id=".H@PAvcI,|diXVK;D^k6">
+            <mutation elseif="6"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="+!;x@@V;E-Ft,WDLozaH">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="xqC^!!pIF~AH5I`+:m8X">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="o}?+,`KfR`I:ify06}%M">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="}C/K]poNM{!6dIyV2,~X">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="E|^X(C4ai(G65gNY/jF=">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.00-Monday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="Sr!}i`x2eJt!*+zF8ZY2">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="Mt/oh.MVmhDQ!5#ME|[c">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="YsmRk??Zv*B^$2:zPVB3">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="variables_set" id="w$mrsu:a[%^B1=k_;PO?">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="-v[y:|CRNNY7rlF7%:Mm">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.01-Tuesday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="logic_compare" id="qy1.dZ[JrM,P*^f)hJ*R">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="P:~6udz/L_MLM+rNQ_A^">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id=")mtT1[7PQSW:@K^k9e*[">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="variables_set" id="9QwbRAPNV-VVcWKqD9+X">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="MX49*jSsy/-YSYVoAO#z">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.02-Wednesday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF3">
+              <block type="logic_compare" id="x1I/}dnl.eV^}RcuG^[?">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="uv1)dP:yK0v^1-)+xOa~">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="5Y{r(tJg_(JhC$X5^0Dq">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block type="variables_set" id="@i@eH-:_^;wQRS_#]6b,">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="u$u:1my?n$ZMega8+opT">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.03-Thursday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF4">
+              <block type="logic_compare" id="=XUtZ6we_;jGhTOErPd*">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="A0YWwq_qp~x^sXZR$rz#">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="v0W)#E5YkdGMOu}C8Ubz">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO4">
+              <block type="variables_set" id="o1lB^(D6A~35u75`?-o]">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="f)[JeHt7DHJ:#M5ZC[e$">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.04-Friday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF5">
+              <block type="logic_compare" id="$$-E28x,U)_A){I{}1-,">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="sRJK4A@6/Js+KOjk$c*n">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="$R{:t?wFELmRb}pLHBA5">
+                    <field name="NUM">6</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO5">
+              <block type="variables_set" id="%)L.px[{g1m!!OG:Ut:k">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="9dP@JbHm7aEBdPk2DSNf">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.05-Saturday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF6">
+              <block type="logic_compare" id="oA=jikJbBMeYOlQcpK-e">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="Z[%1:eQG%{UDz*Gq:_NX">
+                    <field name="VAR" id="iZY0XD/i?cAi94;Md9?s">weekDayNumber</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="+`cN!5![Tma*DycrvU@A">
+                    <field name="NUM">7</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO6">
+              <block type="variables_set" id="xGC/eeczW6ug`mM/WJ`2">
+                <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+                <value name="VALUE">
+                  <block type="field_oid" id="M_yGME?V8YacagK5luD2">
+                    <field name="oid">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.06-Sunday.IDLE_PERIOD_ACTIVE</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="sCNa(fN4LKh7bpAjv7!8">
+        <field name="VAR" id="aA82XyBp#Au#7=_@{=qq">chargeNodeID</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="n]glB4Y[#?yIK{,Ro0}c" x="-1538" y="12">
+    <mutation>
+      <arg name="isActive" varid="N#zOOI}`[NQmz|ZnE16x"></arg>
+    </mutation>
+    <field name="NAME">setDischargeState</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    <statement name="STACK">
+      <block type="control" id="qjH~.|QO)U#yZeQ!_YXx">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+        <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.00-Monday.IDLE_PERIOD_ACTIVE</field>
+        <field name="WITH_DELAY">FALSE</field>
+        <value name="VALUE">
+          <block type="variables_get" id="w#H7Xt(p:01A}*]a_V#q">
+            <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+          </block>
+        </value>
+        <next>
+          <block type="control" id="*1?7=6iwhR^7Sf1j`E,)">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+            <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.01-Tuesday.IDLE_PERIOD_ACTIVE</field>
+            <field name="WITH_DELAY">TRUE</field>
+            <field name="DELAY_MS">1</field>
+            <field name="UNIT">sec</field>
+            <field name="CLEAR_RUNNING">FALSE</field>
+            <value name="VALUE">
+              <block type="variables_get" id="I`s`zi~LF}Rn4}~n*gLV">
+                <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+              </block>
+            </value>
+            <next>
+              <block type="control" id="SvJsZh!hpas:Bnsh$R!Q">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.02-Wednesday.IDLE_PERIOD_ACTIVE</field>
+                <field name="WITH_DELAY">TRUE</field>
+                <field name="DELAY_MS">4</field>
+                <field name="UNIT">sec</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="VALUE">
+                  <block type="variables_get" id="FTmOVzsY3XxCieRba!fH">
+                    <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="]yiVG=-#6Cr|r*NAp#r^">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                    <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.03-Thursday.IDLE_PERIOD_ACTIVE</field>
+                    <field name="WITH_DELAY">TRUE</field>
+                    <field name="DELAY_MS">6</field>
+                    <field name="UNIT">sec</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="yUQ^2Kg269c(SH70poDg">
+                        <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="l;H:Lr)=|Zy0^45Kmu:^">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                        <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.04-Friday.IDLE_PERIOD_ACTIVE</field>
+                        <field name="WITH_DELAY">TRUE</field>
+                        <field name="DELAY_MS">8</field>
+                        <field name="UNIT">sec</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id=".,F)hiyQ0nw!TgGm?A#R">
+                            <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="Oif73B.c6_UJ0Ygcpe#I">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.05-Saturday.IDLE_PERIOD_ACTIVE</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">10</field>
+                            <field name="UNIT">sec</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="Zz!q5/.2;6.RVHe*TY^Y">
+                                <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="control" id="!$w#CbtubPHO(:tuFcYj">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                                <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_DISCHARGE.06-Sunday.IDLE_PERIOD_ACTIVE</field>
+                                <field name="WITH_DELAY">TRUE</field>
+                                <field name="DELAY_MS">12</field>
+                                <field name="UNIT">sec</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="^L/GC8N2J}h6v!J$HCF~">
+                                    <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="lZeKAo6sXBiDTwcQmQ]}" x="-312" y="12">
+    <mutation>
+      <arg name="isActive" varid="N#zOOI}`[NQmz|ZnE16x"></arg>
+    </mutation>
+    <field name="NAME">setChargeState</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    <statement name="STACK">
+      <block type="control" id="Z3xw38V4vV3z@6+,/?A]">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+        <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.00-Monday.IDLE_PERIOD_ACTIVE</field>
+        <field name="WITH_DELAY">FALSE</field>
+        <value name="VALUE">
+          <block type="variables_get" id="B0m0Ir%1*Z{E#|Y%,Pi/">
+            <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+          </block>
+        </value>
+        <next>
+          <block type="control" id="C=;YB||6x:!r]r4GZ`zi">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+            <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.01-Tuesday.IDLE_PERIOD_ACTIVE</field>
+            <field name="WITH_DELAY">TRUE</field>
+            <field name="DELAY_MS">2</field>
+            <field name="UNIT">sec</field>
+            <field name="CLEAR_RUNNING">FALSE</field>
+            <value name="VALUE">
+              <block type="variables_get" id="NdKL9?I2g92%4kzAm^}l">
+                <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+              </block>
+            </value>
+            <next>
+              <block type="control" id="Me`m7ZDa:!@o?ab%`/pj">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.02-Wednesday.IDLE_PERIOD_ACTIVE</field>
+                <field name="WITH_DELAY">TRUE</field>
+                <field name="DELAY_MS">4</field>
+                <field name="UNIT">sec</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="VALUE">
+                  <block type="variables_get" id="Ys^y;0+]7`KEutTS6wk=">
+                    <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="h0X(F(i{me%1C$!e/_zT">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                    <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.03-Thursday.IDLE_PERIOD_ACTIVE</field>
+                    <field name="WITH_DELAY">TRUE</field>
+                    <field name="DELAY_MS">6</field>
+                    <field name="UNIT">sec</field>
+                    <field name="CLEAR_RUNNING">FALSE</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="zJEvMz0~T[|1_8gd(Pd`">
+                        <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="CD,AH7{Uq9RcbZ)79;KX">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                        <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.04-Friday.IDLE_PERIOD_ACTIVE</field>
+                        <field name="WITH_DELAY">TRUE</field>
+                        <field name="DELAY_MS">8</field>
+                        <field name="UNIT">sec</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="dEgp7DH3moEtiWnmr9!0">
+                            <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="eb%8S^XxtX6nn=gpS*X@">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.05-Saturday.IDLE_PERIOD_ACTIVE</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">10</field>
+                            <field name="UNIT">sec</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="EGkb1u(V[?(8)-9mja3Y">
+                                <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="control" id="mgms6W8UJ5sa7!7_Tjc3">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                                <field name="OID">e3dc-rscp.0.EMS.IDLE_PERIODS_CHARGE.06-Sunday.IDLE_PERIOD_ACTIVE</field>
+                                <field name="WITH_DELAY">TRUE</field>
+                                <field name="DELAY_MS">12</field>
+                                <field name="UNIT">sec</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="H3hK~wV=z]%}22nyn$1M">
+                                    <field name="VAR" id="N#zOOI}`[NQmz|ZnE16x">isActive</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
