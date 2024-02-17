@@ -1,0 +1,399 @@
+{
+  "name": "e3dc_diagrams",
+  "settings": {
+    "style": {},
+    "sizex": "412",
+    "sizey": "915"
+  },
+  "widgets": {
+    "w000137": {
+      "tpl": "tplStatefulIFrame8",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "refreshInterval": "0",
+        "g_common": true,
+        "count": "1",
+        "src_0": "/flot/preset.html?preset=Batterie-Zyklen",
+        "src_1": null,
+        "noSandbox": true,
+        "g_frames": true
+      },
+      "style": {
+        "bindings": [],
+        "left": 397,
+        "top": 211,
+        "width": "350px",
+        "height": "157px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000138": {
+      "tpl": "i-vis-background-small",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "iTextSize": "12",
+        "g_common": true,
+        "iIconSize": "35",
+        "iValueType": "boolean",
+        "iButtonCol": "rgba(180,226,50,1)",
+        "g_i-css": true,
+        "iButtonActive": "#455618",
+        "iCornerRadiusUL": 0,
+        "iCornerRadiusUR": "0",
+        "iCornerRadiusLR": 0,
+        "iCornerRadiusLL": "0",
+        "iOpacity": "1",
+        "iOpacityCtn": "1",
+        "iTextColor": "#ffffff"
+      },
+      "style": {
+        "bindings": [],
+        "left": 389,
+        "top": 204,
+        "z-index": "2",
+        "width": "365px",
+        "height": "170px"
+      },
+      "widgetSet": "vis-inventwo"
+    },
+    "w000139": {
+      "tpl": "tplStatefulIFrame8",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "refreshInterval": "0",
+        "g_common": true,
+        "count": "1",
+        "src_0": "/flot/preset.html?preset=SOH",
+        "src_1": null,
+        "noSandbox": true,
+        "g_frames": true
+      },
+      "style": {
+        "bindings": [],
+        "left": 24,
+        "top": 211,
+        "width": "350px",
+        "height": "157px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000140": {
+      "tpl": "i-vis-background-small",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "iTextSize": "12",
+        "g_common": true,
+        "iIconSize": "35",
+        "iValueType": "boolean",
+        "iButtonCol": "rgba(180,226,50,1)",
+        "g_i-css": true,
+        "iButtonActive": "#455618",
+        "iCornerRadiusUL": 0,
+        "iCornerRadiusUR": "0",
+        "iCornerRadiusLR": 0,
+        "iCornerRadiusLL": "0",
+        "iOpacity": "1",
+        "iOpacityCtn": "1",
+        "iTextColor": "#ffffff"
+      },
+      "style": {
+        "bindings": [],
+        "left": 16,
+        "top": 204,
+        "z-index": "2",
+        "width": "365px",
+        "height": "170px"
+      },
+      "widgetSet": "vis-inventwo"
+    },
+    "w000141": {
+      "tpl": "tplStatefulIFrame8",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "refreshInterval": "0",
+        "g_common": true,
+        "count": "1",
+        "src_0": "/flot/preset.html?preset=Ladesperren",
+        "src_1": null,
+        "noSandbox": true,
+        "g_frames": true
+      },
+      "style": {
+        "bindings": [],
+        "left": "24px",
+        "top": 390,
+        "width": "350px",
+        "height": "157px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000142": {
+      "tpl": "i-vis-background-small",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "iTextSize": "12",
+        "g_common": true,
+        "iIconSize": "35",
+        "iValueType": "boolean",
+        "iButtonCol": "rgba(180,226,50,1)",
+        "g_i-css": true,
+        "iButtonActive": "#455618",
+        "iCornerRadiusUL": 0,
+        "iCornerRadiusUR": "0",
+        "iCornerRadiusLR": 0,
+        "iCornerRadiusLL": "0",
+        "iOpacity": "1",
+        "iOpacityCtn": "1",
+        "iTextColor": "#ffffff"
+      },
+      "style": {
+        "bindings": [],
+        "left": 16,
+        "top": 383,
+        "z-index": "2",
+        "width": "365",
+        "height": "170px"
+      },
+      "widgetSet": "vis-inventwo"
+    },
+    "w000146": {
+      "tpl": "tplContainerView",
+      "data": {
+        "bindings": [],
+        "contains_view": "nav",
+        "g_common": true
+      },
+      "style": {
+        "bindings": [],
+        "left": 279,
+        "top": 747,
+        "width": "213px",
+        "height": "84px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000157": {
+      "tpl": "tplStatefulIFrame8",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "refreshInterval": "0",
+        "g_common": true,
+        "count": "1",
+        "src_0": "/flot/preset.html?preset=Batterie-Termperatur",
+        "src_1": null,
+        "noSandbox": true,
+        "g_frames": true
+      },
+      "style": {
+        "bindings": [],
+        "left": 24,
+        "top": 33,
+        "width": "350",
+        "height": "157px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000158": {
+      "tpl": "i-vis-background-small",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "iTextSize": "12",
+        "g_common": true,
+        "iIconSize": "35",
+        "iValueType": "boolean",
+        "iButtonCol": "rgba(180,226,50,1)",
+        "g_i-css": true,
+        "iButtonActive": "#455618",
+        "iCornerRadiusUL": 0,
+        "iCornerRadiusUR": "0",
+        "iCornerRadiusLR": 0,
+        "iCornerRadiusLL": "0",
+        "iOpacity": "1",
+        "iOpacityCtn": "1",
+        "iTextColor": "#ffffff"
+      },
+      "style": {
+        "bindings": [],
+        "left": 16,
+        "top": 26,
+        "z-index": "2",
+        "width": "365",
+        "height": "170px"
+      },
+      "widgetSet": "vis-inventwo"
+    },
+    "w000159": {
+      "tpl": "tplStatefulIFrame8",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "refreshInterval": "0",
+        "g_common": true,
+        "count": "1",
+        "src_0": "/flot/preset.html?preset=Wechselrichter-Termperatur",
+        "src_1": null,
+        "noSandbox": true,
+        "g_frames": true
+      },
+      "style": {
+        "bindings": [],
+        "left": 397,
+        "top": 33,
+        "width": "350px",
+        "height": "157px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000160": {
+      "tpl": "i-vis-background-small",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "iTextSize": "12",
+        "g_common": true,
+        "iIconSize": "35",
+        "iValueType": "boolean",
+        "iButtonCol": "rgba(180,226,50,1)",
+        "g_i-css": true,
+        "iButtonActive": "#455618",
+        "iCornerRadiusUL": 0,
+        "iCornerRadiusUR": "0",
+        "iCornerRadiusLR": 0,
+        "iCornerRadiusLL": "0",
+        "iOpacity": "1",
+        "iOpacityCtn": "1",
+        "iTextColor": "#ffffff"
+      },
+      "style": {
+        "bindings": [],
+        "left": 389,
+        "top": 26,
+        "z-index": "2",
+        "width": "365px",
+        "height": "170px"
+      },
+      "widgetSet": "vis-inventwo"
+    },
+    "w000161": {
+      "tpl": "tplStatefulIFrame8",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "refreshInterval": "0",
+        "g_common": true,
+        "count": "1",
+        "src_0": "/flot/preset.html?preset=String-Voltage",
+        "src_1": null,
+        "noSandbox": true,
+        "g_frames": true
+      },
+      "style": {
+        "bindings": [],
+        "left": 24,
+        "top": 568,
+        "width": "350",
+        "height": "157px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000162": {
+      "tpl": "i-vis-background-small",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "iTextSize": "12",
+        "g_common": true,
+        "iIconSize": "35",
+        "iValueType": "boolean",
+        "iButtonCol": "rgba(180,226,50,1)",
+        "g_i-css": true,
+        "iButtonActive": "#455618",
+        "iCornerRadiusUL": 0,
+        "iCornerRadiusUR": "0",
+        "iCornerRadiusLR": 0,
+        "iCornerRadiusLL": "0",
+        "iOpacity": "1",
+        "iOpacityCtn": "1",
+        "iTextColor": "#ffffff"
+      },
+      "style": {
+        "bindings": [],
+        "left": 16,
+        "top": 561,
+        "z-index": "2",
+        "width": "365",
+        "height": "170px"
+      },
+      "widgetSet": "vis-inventwo"
+    },
+    "w000163": {
+      "tpl": "tplStatefulIFrame8",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "refreshInterval": "0",
+        "g_common": true,
+        "count": "1",
+        "src_0": "/flot/preset.html?preset=Entladesperren",
+        "src_1": null,
+        "noSandbox": true,
+        "g_frames": true
+      },
+      "style": {
+        "bindings": [],
+        "left": 397,
+        "top": 390,
+        "width": "350px",
+        "height": "157px",
+        "z-index": "3"
+      },
+      "widgetSet": "basic"
+    },
+    "w000164": {
+      "tpl": "i-vis-background-small",
+      "data": {
+        "bindings": [],
+        "oid": "nothing_selected",
+        "iTextSize": "12",
+        "g_common": true,
+        "iIconSize": "35",
+        "iValueType": "boolean",
+        "iButtonCol": "rgba(180,226,50,1)",
+        "g_i-css": true,
+        "iButtonActive": "#455618",
+        "iCornerRadiusUL": 0,
+        "iCornerRadiusUR": "0",
+        "iCornerRadiusLR": 0,
+        "iCornerRadiusLL": "0",
+        "iOpacity": "1",
+        "iOpacityCtn": "1",
+        "iTextColor": "#ffffff"
+      },
+      "style": {
+        "bindings": [],
+        "left": 389,
+        "top": 383,
+        "z-index": "2",
+        "width": "365",
+        "height": "170px"
+      },
+      "widgetSet": "vis-inventwo"
+    }
+  },
+  "activeWidgets": {}
+}
