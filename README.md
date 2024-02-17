@@ -11,7 +11,7 @@ Alle Parameter (Grenzen, Offsets) sind konfigurierbar. Beide Automaten lassen si
 **Wichtiger Hinweis:** ich entwickelte diese Funktion nur für meinen eigenen Bedarf. Ich leiste weder Support, noch übernehme ich Garantie oder Haftung für irgendwelche Schäden, sollte jemand meine Entwicklung bei sich einsetzen. Ich bin auch kein Experte für raspberry/js/iobroker, sondern mache das seit einiger Zeit als Lückenfüller-Hobby.
 Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesserungsvorschläge, Ideen gerne willkommen, ohne dass ich ihre Umsetzung versprechen kann. Ich werde es nach Möglichkeit versuchen, gerne in Kooperation ;). 
 
-# Voraussetzungen für den Einsatz
+# Voraussetzungen
 - Iobroker (bei mir auf rasperry PI 5)
 - Adapter (Nutzer-individuell konfiguriert)
   - Javascipt mit blockly
@@ -25,7 +25,7 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
   - **Im E3DC-Portal/App soll für jeden Wochentag je !1! Eintrag für Sperrzeit/Entsperrzeit mit Zeit von 00:00 bis 00:00 eingestellt werden**
 
 
-# Einrichtung:
+# Einrichtung
 
 1.	Importieren datapoints
 2.	Importieren blockly-scripts
