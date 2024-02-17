@@ -12,7 +12,7 @@ Alle Parameter (Grenzen, Offsets) sind konfigurierbar. Beide Automaten lassen si
 Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesserungsvorschläge, Ideen gerne willkommen, ohne dass ich ihre Umsetzung versprechen kann. Ich werde es nach Möglichkeit versuchen, gerne in Kooperation ;). 
 
 # Voraussetzungen
-- Iobroker (bei mir auf rasperry PI 5)
+- Iobroker (bei mir auf raspberry PI 5)
 - Adapter (Nutzer-individuell konfiguriert)
   - Javascipt mit blockly
   - vis.2.0 (optional, falls Steuerung über view erfolgen soll)
