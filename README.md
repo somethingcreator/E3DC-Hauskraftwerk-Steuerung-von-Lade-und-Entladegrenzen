@@ -22,7 +22,7 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
     - vis-inventwo
   - e3dc-rscp
   - web
-  - **Im E3DC-Portal/App soll für jeden Wochentag je !1! Eintrag für Sperrzeit/Entsperrzeit mit Zeit von 00:00 bis 00:00 eingestellt werden**
+  - **Im E3DC-Portal/App soll für jeden Wochentag je !1! Eintrag für Ladesperrzeit und Entladesperrzeit mit Zeit von 00:00 bis 00:00 eingestellt werden**
 
 
 # Einrichtung
