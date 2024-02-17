@@ -78,7 +78,7 @@
                 <value name="ADD9">
                   <block type="get_value" id="i-[4owuzShbMK?Oq6=Y9">
                     <field name="ATTR">val</field>
-                    <field name="OID">0_userdata.0.data.E3DC.offSetForStateChange</field>
+                    <field name="OID">0_userdata.0.data.E3DC.offSetForChargeState</field>
                   </block>
                 </value>
                 <value name="ADD10">
