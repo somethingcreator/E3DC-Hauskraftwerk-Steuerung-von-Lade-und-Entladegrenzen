@@ -20,6 +20,7 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
     - vis-materialdesign
     - vis-material-advanced
     - vis-inventwo
+    - vis-2-widgets-gauges
   - e3dc-rscp
   - web
   - **Im E3DC-Portal/App soll für jeden Wochentag je !1! Eintrag für Ladesperrzeit und Entladesperrzeit mit Zeit von 00:00 bis 00:00 eingestellt werden**
@@ -34,7 +35,8 @@ Der Code kann frei genutzt und eigenständig weiterentwickelt werden. Verbesseru
 
 Steuerung entweder über view oder über Datapoints. Diese sind, denke ich, selbsterklärend.
    
-![scrsh](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/1254350b-c2c5-4d4e-8a5d-5bb56f226602)
+![Unbenannt](https://github.com/somethingcreator/E3DC-Hauskraftwerk-Steuerung-von-Lade-und-Entladegrenzen/assets/160220332/92723e0f-1cd6-45ab-8bd9-4364ce196985)
+
 
 Ich habe für mich unter Einsatz von history und flot noch ein paar Diagramme erstellt. Ich überlasse es aber euch, sich davon (un)inspirieren zu lassen :)
 
