@@ -40,4 +40,4 @@ Steuerung entweder über view oder über Datapoints. Diese sind, denke ich, selb
 
 Ich habe für mich unter Einsatz von history und flot noch ein paar Diagramme erstellt. Ich überlasse es aber euch, sich davon (un)inspirieren zu lassen :)
 
-![diagramme](https://github.com/somethingcreator/e3dc_chargelimitmanager/assets/160220332/2b440320-9958-4195-8794-e392a10304f5)
+![Unbenannt](https://github.com/somethingcreator/E3DC-Hauskraftwerk-Steuerung-von-Lade-und-Entladegrenzen/assets/160220332/200b127a-472c-4bb2-88eb-0c4004cbd45f)
